@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan Audi & Shita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff8f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to bottom, #fff, #ffe8ef);
+      text-align: center;
+      padding: 80px 20px;
+      border-bottom: 3px solid #f8d6c2;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #c48b63;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    header p {
+      color: #555;
+      font-size: 18px;
+      margin-top: 0;
+    }
+    .countdown {
+      font-size: 20px;
+      color: #b97b58;
+      margin-top: 20px;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .event-info {
+      background-color: #fff;
+    }
+    .event-info h2 {
+      color: #c48b63;
+      font-family: 'Playfair Display', serif;
+    }
+    .gallery {
+      background-color: #fffdfd;
+    }
+    .gallery img {
+      width: 280px;
+      border-radius: 12px;
+      margin: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    /* Pricing section */
+    #pricing {
+      background-color: #fff8f9;
+      padding: 60px 20px;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    #pricing h2 {
+      color: #c48b63;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+    }
+    #pricing p {
+      color: #666;
+      margin-bottom: 40px;
+    }
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .pricing-card {
+      background: #fff;
+      border: 2px solid #f8d6c2;
+      border-radius: 12px;
+      padding: 30px;
+      width: 280px;
+      text-align: left;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .pricing-card.featured {
+      border: 3px solid #d19f68;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+    .pricing-card h3 {
+      color: #b97b58;
+      text-align: center;
+    }
+    .pricing-card p.price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #d19f68;
+      text-align: center;
+    }
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      color: #555;
+    }
+    .pricing-card li {
+      margin-bottom: 8px;
+    }
+    .pricing-card button {
+      display: block;
+      margin: 15px auto 0;
+      background: #f1cbb8;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    footer {
+      background-color: #fef2f6;
+      padding: 20px;
+      text-align: center;
+      color: #a97b6b;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Audi Richardy & Katarina Shita</h1>
+    <p>Dengan penuh cinta, kami mengundang Anda untuk hadir di hari bahagia kami.</p>
+    <div class="countdown" id="countdown"></div>
+  </header>
+
+  <section class="event-info">
+    <h2>Detail Acara</h2>
+    <p>🗓 Minggu, 20 Juli 2025<br>⏰ 10.00 WIB<br>📍 Gedung Serbaguna Cempaka Putih</p>
+  </section>
+
+   <!-- Pricing Section Start -->
+  <section id="pricing">
+    <h2>Paket Website Undangan</h2>
+    <p>Pilih paket yang sesuai dengan kebutuhan acara Anda.</p>
+    <div class="pricing-container">
+
+      <div class="pricing-card">
+        <h3>Basic</h3>
+        <p class="price">Rp99.000</p>
+        <ul>
+          <li>✅ Desain elegan 1 halaman</li>
+          <li>✅ Countdown acara</li>
+          <li>✅ RSVP form (dummy)</li>
+          <li>❌ Tanpa musik / domain</li>
+        </ul>
+        <button>Pilih Paket</button>
+      </div>
+
+      <div class="pricing-card featured">
+        <h3>Standard</h3>
+        <p class="price">Rp249.000</p>
+        <ul>
+          <li>✅ Desain elegan custom warna</li>
+          <li>✅ Musik pilihan</li>
+          <li>✅ RSVP aktif via Google Form</li>
+          <li>✅ Link unik (.github.io)</li>
+        </ul>
+        <button>Pilih Paket</button>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Premium</h3>
+        <p class="price">Rp499.000</p>
+        <ul>
+          <li>✅ Desain full custom</li>
+          <li>✅ Animasi & musik</li>
+          <li>✅ Galeri foto/video</li>
+          <li>✅ Domain .my.id + hosting</li>
+        </ul>
+        <button>Pilih Paket</button>
+      </div>
+
+    </div>
+  </section>
+  <!-- Pricing Section End -->
+
+  <section class="gallery">
+    <h2>Galeri Cinta</h2>
+    <div>
+      <img src="https://picsum.photos/300/200?random=1" alt="foto1">
+      <img src="https://picsum.photos/300/200?random=2" alt="foto2">
+      <img src="https://picsum.photos/300/200?random=3" alt="foto3">
+    </div>
+  </section>
+
+  <section>
+    <h2>RSVP</h2>
+    <p>Silakan konfirmasi kehadiran Anda.</p>
+    <form>
+      <input type="text" placeholder="Nama Anda" style="padding:10px; width:80%; max-width:300px; margin-bottom:10px;"><br>
+      <select style="padding:10px; width:80%; max-width:300px; margin-bottom:10px;">
+        <option>Hadir</option>
+        <option>Tidak Hadir</option>
+      </select><br>
+      <button type="submit" style="padding:10px 20px; background-color:#c48b63; border:none; color:white; border-radius:8px;">Kirim</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Website dibuat oleh GusRich Website Maker © 2025</p>
+  </footer>
+
+  <script>
+    // Countdown Script
+    const targetDate = new Date("July 20, 2025 10:00:00").getTime();
+    const countdown = document.getElementById("countdown");
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      countdown.textContent = ${days} hari ${hours} jam ${mins} menit lagi;
+    }, 1000);
+  </script>
+
+</body>
+</html>
