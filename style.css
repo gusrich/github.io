@@ -17,11 +17,23 @@
 }
 
 body {
-  background: var(--bg-dark);
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #000814, #001d3d, #003566, #000814);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
   color: var(--text-light);
   line-height: 1.6;
   overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
 }
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 /* =================== NAVBAR =================== */
 header {
@@ -233,3 +245,4 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
