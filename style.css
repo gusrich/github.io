@@ -121,14 +121,52 @@ nav a:hover {
   text-shadow: 0 0 10px var(--accent-glow);
 }
 
-/* CARD */
+/* === SECTION: LAYANAN / PAKET === */
+section {
+  padding: 80px 20px;
+  color: var(--text-light);
+}
+
+.services, .pricing {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 .card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
-  padding: 2rem;
-  transition: all 0.4s ease;
-  box-shadow: 0 0 0 transparent;
+  background: rgba(10, 15, 35, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px var(--accent);
+}
+
+.card h3 {
+  color: var(--accent);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* === SECTION TITLE === */
+section h2 {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
 }
 
 .card:hover {
@@ -245,6 +283,8 @@ footer {
   }
 }
 /* === SECTION: HERO END === */
+
+
 /* === FIX OVERLAY DAN Z-INDEX === */
 .hero {
   z-index: 1;
@@ -265,6 +305,7 @@ section:not(.hero) {
 section {
   isolation: isolate;
 }
+
 
 
 
