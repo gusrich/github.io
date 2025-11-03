@@ -125,12 +125,13 @@ section h2 {
   color: #fff;
 }
 
-.services {
-  max-width: 1100px;
-  margin: auto;
+.services,{
+  max-width: 900px;       /* lebar konten maksimal */
+  margin: 0 auto;         /* center */
   display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
+  grid-template-columns: 1fr; /* <<< JADIKAN SATU KOLOM (VERTICAL) */
+  padding: 0 20px;
 }
 
 .card {
@@ -160,12 +161,12 @@ section h2 {
 
 /* === SECTION: PRICING START === */
 .pricing {
-  max-width: 1100px;
-  margin: auto;
+  max-width: 900px;       /* lebar konten maksimal */
+  margin: 0 auto;         /* center */
   display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
+  gap: 22px;
+  grid-template-columns: 1fr; /* <<< JADIKAN SATU KOLOM (VERTICAL) */
+  padding: 0 20px;
 .price-card {
   background: rgba(15, 20, 40, 0.8);
   border: 1px solid rgba(0, 255, 255, 0.15);
@@ -259,3 +260,4 @@ footer {
   font-size: 0.9rem;
 }
 /* === FOOTER END === */
+
