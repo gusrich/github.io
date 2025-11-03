@@ -130,7 +130,7 @@
   <section class="hero">
   <h1>Undangan Pernikahan Audi & Shita</h1>
   <p>Kepada Yth:</p>
-  <h2 id="guest-name">Sdr. Reza & Keluarga</h2> <!-- Nama tamu muncul di sini -->
+  <h2 id="guest-name">Sdr. Reza & Keluarga</h2>
 </section>
 
   <!-- Countdown Acara -->
@@ -217,6 +217,7 @@
         <li>✅ Link unik custom (-nama pasangan-.my.id)</li>
         <li>✅ RSVP aktif via Google Form</li>
         <li>✅ Google Maps lokasi untuk tamu</li>
+        <li>✅ Nama Tamu Undangan</li>
       </ul>
       <button onclick="orderPaket('Premium')" 
         style="background:#f4b400; border:none; padding:10px 25px; border-radius:30px; color:white; cursor:pointer; transition:0.3s;">
@@ -351,7 +352,7 @@
   if (guestName && nameTarget) {
     nameTarget.textContent = decodeURIComponent(guestName);
   } else if (nameTarget) {
-    nameTarget.textContent = "Tamu Undangan";
+    nameTarget.textContent = "YTH : nama Tamu Undangan";
   }
 </script>
 </body>
