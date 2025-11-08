@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://gusrich.github.io/travel/djalandjalanjogja/sitemap.xml
