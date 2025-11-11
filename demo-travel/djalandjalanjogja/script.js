@@ -35,4 +35,72 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
+// ANIMASI FADE-IN KARTU SAAT SCROLL
+const cards = document.querySelectorAll(".paket-card");
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      // kasih delay sedikit biar muncul satu-satu
+      setTimeout(() => {
+        entry.target.classList.add("show");
+      }, i * 150);
+      observer.unobserve(entry.target); // biar animasi 1x aja
+    }
+  });
+}, {
+  threshold: 0.15 // muncul 15% udah cukup
+});
+
+cards.forEach(card => observer.observe(card));
+
+// ANIMASI FADE-IN UNTUK DETAIL CARD SAAT SCROLL
+const detailCards = document.querySelectorAll(".detail-card");
+
+const detailObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add("show");
+      }, i * 200); // delay lebih lama biar smooth & gantian muncul
+      detailObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+detailCards.forEach(card => detailObserver.observe(card));
+
+// === SWITCH TAB VIDEO / FOTO ===
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    document.querySelector(`#tab-${btn.dataset.tab}`).classList.add('active');
+  });
+});
+
+// === TOGGLE VIDEO ===
+const toggleVideoBtn = document.getElementById('toggleVideo');
+const videoHidden = document.querySelectorAll('#tab-video .hidden');
+let videoExpanded = false;
+
+toggleVideoBtn.addEventListener('click', () => {
+  videoHidden.forEach(el => el.classList.toggle('show'));
+  videoExpanded = !videoExpanded;
+  toggleVideoBtn.textContent = videoExpanded ? 'Tutup Video' : 'Lihat Semua Video';
+});
+
+// === TOGGLE FOTO ===
+const toggleFotoBtn = document.getElementById('toggleFoto');
+const fotoHidden = document.querySelectorAll('#tab-foto .hidden');
+let fotoExpanded = false;
+
+toggleFotoBtn.addEventListener('click', () => {
+  fotoHidden.forEach(el => el.classList.toggle('show'));
+  fotoExpanded = !fotoExpanded;
+  toggleFotoBtn.textContent = fotoExpanded ? 'Tutup Foto' : 'Lihat Semua Foto';
+});
